@@ -1,0 +1,5 @@
+---
+title: World boss
+---
+
+WIP
