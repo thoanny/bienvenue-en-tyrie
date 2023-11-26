@@ -18,13 +18,13 @@
         style="background-image: url(https://picsum.photos/1600/300);">
         <div class="hero-overlay bg-opacity-80"></div>
         <div class="hero-content text-center text-white py-12 px-24">
-          <div class="text-4xl font-bold leading-6 uppercase">{{ (doc.heroTitle) ? doc.heroTitle : doc.title }}</div>
+          <div class="text-4xl font-bold leading-10 uppercase">{{ (doc.heroTitle) ? doc.heroTitle : doc.title }}</div>
         </div>
       </div>
     </ContentDoc>
 
     <div class="flex gap-6">
-      <div class="w-1/5">
+      <div class="w-1/5 min-w-min">
         <nav class="sticky top-4">
           <ContentNavigation v-slot="{ navigation }">
             <ul class="menu menu-sm bg-base-200 w-full rounded-lg">
@@ -45,7 +45,7 @@
       </div>
 
       <ContentDoc v-slot="{ doc }">
-        <div class="w-3/5">
+        <div class="flex-1">
           <div v-if="doc">
             <!-- <pre>{{ doc }}</pre> -->
             <article class="prose lg:prose-xl">
@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="w-1/5">
+        <div class="w-1/5 hidden md:block">
           <nav v-if="doc.body?.toc?.links.length" class="sticky top-4">
             <ul class="menu menu-sm border w-full rounded-lg">
               <li v-for="link in doc.body.toc.links">
