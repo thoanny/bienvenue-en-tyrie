@@ -23,9 +23,9 @@
       </div>
     </ContentDoc>
 
-    <div class="flex gap-6">
-      <div class="w-1/5 min-w-min">
-        <nav class="sticky top-4">
+    <div class="flex gap-6 flex-col md:flex-row">
+      <div class="sm:w-full md:w-1/5">
+        <nav class="md:sticky top-4">
           <ContentNavigation v-slot="{ navigation }">
             <ul class="menu menu-sm bg-base-200 w-full rounded-lg">
               <li v-for="link of navigation" :key="link._path">
@@ -48,7 +48,7 @@
         <div class="flex-1">
           <div v-if="doc">
             <!-- <pre>{{ doc }}</pre> -->
-            <article class="prose lg:prose-xl">
+            <article class="prose lg:prose-xl p-4 md:p-0">
               <ContentRenderer :value="doc" />
             </article>
             <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-12 opacity-50" v-if="doc.contributors">
