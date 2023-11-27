@@ -68,3 +68,7 @@ article {
         @apply list-decimal;
     }
 }
+
+.router-link-active {
+    @apply active;
+}

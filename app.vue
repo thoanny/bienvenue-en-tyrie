@@ -1,3 +1,7 @@
+<script setup>
+const { surround } = useContent();
+</script>
+
 <template>
   <div class="container mx-auto my-6">
     <div class="navbar bg-base-100 shadow-lg rounded-box mb-6">
@@ -55,10 +59,20 @@
               <strong class="text-xs">Contributeurs&nbsp;:</strong>
               <span class="badge badge-sm badge-neutral" v-for="c in doc.contributors">{{ c }}</span>
             </div>
+            <div v-if="surround" class="flex gap-4 font-semibold mt-6">
+              <NuxtLink :to="surround[0]._path" v-if="surround[0]" class="border p-4 w-1/2">
+                &laquo; {{ surround[0].heroTitle || surround[0].title }}
+              </NuxtLink>
+              <span class="w-1/2" v-else></span>
+              <NuxtLink :to="surround[1]._path" v-if="surround[1]" class="border p-4 w-1/2 text-right">
+                {{ surround[1].heroTitle || surround[1].title }} &raquo;
+              </NuxtLink>
+              <span class="w-1/2" v-else></span>
+            </div>
           </div>
         </div>
-        <div class="w-1/5 hidden md:block">
-          <nav v-if="doc.body?.toc?.links.length" class="sticky top-4">
+        <div class="w-1/5 hidden md:block" v-if="doc.body?.toc?.links.length">
+          <nav class="sticky top-4">
             <ul class="menu menu-sm border w-full rounded-lg">
               <li v-for="link in doc.body.toc.links">
                 <a :href="'#' + link.id">{{ link.text }}</a>
