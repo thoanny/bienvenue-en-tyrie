@@ -3,33 +3,37 @@ const { surround } = useContent();
 </script>
 
 <template>
-  <div class="container mx-auto my-6">
-    <div class="navbar bg-base-100 shadow-lg rounded-box mb-6">
-      <div class="flex-1">
-        <NuxtLink to="/" class="btn btn-ghost text-xl">Bienvenue en Tyrie</NuxtLink>
-      </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li><a>Contribuer</a></li>
-          <li><a>Source</a></li>
-          <li><a>Soutenir</a></li>
-        </ul>
-      </div>
+  <header class="bg-primary overflow-hidden relative" style="height: 600px;">
+    <div class="bg-black text-white flex justify-between items-center">
+      <NuxtLink to="/" class="text-lg leading-4 font-bold mx-4 flex gap-2 items-center hover:text-gray-300 py-2 md:py-0">
+        <img src="@/assets/img/logo.png" class="h-10 w-10" />
+        Bienvenue en Tyrie
+      </NuxtLink>
+      <ul class="menu menu-horizontal px-1 uppercase text-gray-500 font-semibold hidden md:flex">
+        <li>
+          <a href="/#contribuer">Contribuer</a>
+        </li>
+        <li>
+          <a href="/#code-source">Source</a>
+        </li>
+        <li><a>Soutenir</a></li>
+      </ul>
     </div>
-
+    <img src="@/assets/img/background-default.jpg" class="absolute h-full w-full object-cover object-center z-10" alt="">
     <ContentDoc v-slot="{ doc }">
-      <div class="hero rounded-box overflow-hidden mb-6 h-screen max-h-72 shadow-lg"
-        style="background-image: url(https://picsum.photos/1600/300);">
-        <div class="hero-overlay bg-opacity-80"></div>
-        <div class="hero-content text-center text-white py-12 px-24">
-          <div class="text-4xl font-bold leading-10 uppercase">{{ (doc.heroTitle) ? doc.heroTitle : doc.title }}</div>
-        </div>
+      <div
+        class="bg-black h-full w-full bg-opacity-50 absolute z-20 text-center uppercase text-4xl flex items-center justify-center text-center text-white font-bold pb-44 px-8">
+        {{ (doc.heroTitle) ? doc.heroTitle : doc.title }}
       </div>
     </ContentDoc>
+    <Divider />
+  </header>
+
+  <div class="container mx-auto mb-6">
 
     <div class="flex gap-6 flex-col md:flex-row">
       <div class="sm:w-full md:w-1/5">
-        <nav class="md:sticky top-4">
+        <nav class="md:sticky top-4" id="menu">
           <ContentNavigation v-slot="{ navigation }">
             <ul class="menu menu-sm bg-base-200 w-full rounded-lg">
               <li v-for="link of navigation" :key="link._path">
