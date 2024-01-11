@@ -59,17 +59,18 @@ const { surround } = useContent();
             <article class="prose lg:prose-xl p-4 md:p-0">
               <ContentRenderer :value="doc" />
             </article>
-            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-12 opacity-50" v-if="doc.contributors">
+            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-12 opacity-50 px-4 md:px-0"
+              v-if="doc.contributors">
               <strong class="text-xs">Contributeurs&nbsp;:</strong>
               <span class="badge badge-sm badge-neutral" v-for="c in doc.contributors">{{ c }}</span>
             </div>
-            <div v-if="surround" class="flex gap-4 font-semibold mt-6">
-              <NuxtLink :to="surround[0]._path" v-if="surround[0]" class="border p-4 w-1/2">
-                &laquo; {{ surround[0].heroTitle || surround[0].title }}
+            <div v-if="surround" class="flex gap-4 font-semibold mt-6 px-4 md:px-0">
+              <NuxtLink :to="surround[0]._path" v-if="surround[0]" class="border p-4 w-1/2 flex gap-1">
+                &laquo; <span class="truncate">{{ surround[0].heroTitle || surround[0].title }}</span>
               </NuxtLink>
               <span class="w-1/2" v-else></span>
-              <NuxtLink :to="surround[1]._path" v-if="surround[1]" class="border p-4 w-1/2 text-right">
-                {{ surround[1].heroTitle || surround[1].title }} &raquo;
+              <NuxtLink :to="surround[1]._path" v-if="surround[1]" class="border p-4 w-1/2 flex justify-end gap-1">
+                <span class="truncate">{{ surround[1].heroTitle || surround[1].title }}</span> &raquo;
               </NuxtLink>
               <span class="w-1/2" v-else></span>
             </div>
