@@ -37,7 +37,7 @@ const { surround } = useContent();
           <ContentNavigation v-slot="{ navigation }">
             <ul class="menu menu-sm bg-base-200 w-full rounded-lg">
               <li v-for="link of navigation" :key="link._path">
-                <details v-if="link.children">
+                <details v-if="link.children && link.children.length > 1">
                   <summary>{{ link.title }}</summary>
                   <ul>
                     <li v-for="child in link.children" :key="child._path">

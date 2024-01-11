@@ -1,6 +1,6 @@
 ---
-title: Généralités
+title: Joueur contre Joueur
 heroTitle: Introduction au JcJ
 ---
 
-WIP
+::WIP
