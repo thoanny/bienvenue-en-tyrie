@@ -1,17 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/main.scss'],
+  css: ["~/assets/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  modules: [
-    '@nuxt/content'
-  ],
+  modules: ["@nuxt/content"],
   content: {
-    documentDriven: true
-  }
-})
+    documentDriven: true,
+  },
+});
