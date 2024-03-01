@@ -2,4 +2,5 @@
 title: Stockage
 ---
 
-WIP
+::WorkInProgress
+::

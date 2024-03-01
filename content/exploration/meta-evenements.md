@@ -2,4 +2,5 @@
 title: Méta-événements
 ---
 
-WIP
+::WorkInProgress
+::

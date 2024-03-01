@@ -2,4 +2,5 @@
 title: Missions d'attaque
 ---
 
-WIP
+::WorkInProgress
+::

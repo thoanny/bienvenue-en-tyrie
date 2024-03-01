@@ -2,4 +2,5 @@
 title: Créateurs de contenu
 ---
 
-WIP
+::WorkInProgress
+::

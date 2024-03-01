@@ -2,4 +2,5 @@
 title: Monnaies
 ---
 
-WIP
+::WorkInProgress
+::

@@ -2,4 +2,5 @@
 title: Archétypes
 ---
 
-WIP
+::WorkInProgress
+::

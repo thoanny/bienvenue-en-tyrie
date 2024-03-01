@@ -2,4 +2,5 @@
 title: Événements instanciés
 ---
 
-WIP
+::WorkInProgress
+::

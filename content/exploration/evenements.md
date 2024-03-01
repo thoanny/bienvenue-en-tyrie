@@ -2,4 +2,5 @@
 title: Événements dynamiques
 ---
 
-WIP
+::WorkInProgress
+::

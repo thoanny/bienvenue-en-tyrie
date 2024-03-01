@@ -2,4 +2,5 @@
 title: Chasses aux brèches kryptis
 ---
 
-WIP
+::WorkInProgress
+::

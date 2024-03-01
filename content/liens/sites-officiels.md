@@ -2,4 +2,5 @@
 title: Sites officiels
 ---
 
-WIP
+::WorkInProgress
+::

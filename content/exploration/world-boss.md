@@ -2,4 +2,5 @@
 title: World boss
 ---
 
-WIP
+::WorkInProgress
+::

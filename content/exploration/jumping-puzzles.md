@@ -2,4 +2,5 @@
 title: Puzzles de sauts
 ---
 
-WIP
+::WorkInProgress
+::

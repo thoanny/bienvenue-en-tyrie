@@ -2,4 +2,5 @@
 title: Généralités
 ---
 
-WIP
+::WorkInProgress
+::

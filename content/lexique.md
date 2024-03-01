@@ -11,7 +11,7 @@ _Agony Resistance_ (résistance à l'agonie, en français). Statistique de perso
 
 ## CM
 
-_Challenge Mote_ (particule de défi, en français). Sert à activer le mode défi de l'instance (raids, :Definition{text="fractales" term="fractal"} et missions d'attaque). Ajoute de la difficulté au combat : des boss avec plus de points de vie, de nouvelles mécaniques, etc.
+_Challenge Mote_ (particule de défi, en français). Sert à activer le mode défi de l'instance (raids, fractales et missions d'attaque). Ajoute de la difficulté au combat : des boss avec plus de points de vie, de nouvelles mécaniques, etc.
 
 ## Fractal
 

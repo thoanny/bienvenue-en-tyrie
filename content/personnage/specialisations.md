@@ -2,4 +2,5 @@
 title: Spécialisations
 ---
 
-WIP
+::WorkInProgress
+::

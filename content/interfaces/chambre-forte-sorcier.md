@@ -2,4 +2,5 @@
 title: Chambre forte du sorcier
 ---
 
-WIP
+::WorkInProgress
+::

@@ -2,4 +2,5 @@
 title: Colifichets
 ---
 
-WIP
+::WorkInProgress
+::

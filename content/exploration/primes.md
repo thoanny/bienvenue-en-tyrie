@@ -2,4 +2,5 @@
 title: Chasses à la prime
 ---
 
-WIP
+::WorkInProgress
+::

@@ -2,4 +2,5 @@
 title: Équipement
 ---
 
-WIP
+::WorkInProgress
+::

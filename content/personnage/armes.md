@@ -2,4 +2,5 @@
 title: Armes
 ---
 
-WIP
+::WorkInProgress
+::

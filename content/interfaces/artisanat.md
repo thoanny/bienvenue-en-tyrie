@@ -2,4 +2,5 @@
 title: Artisanat
 ---
 
-WIP
+::WorkInProgress
+::
