@@ -6,6 +6,11 @@ const menuOpen = ref(false);
 const handleMenuOpen = () => {
   menuOpen.value = !menuOpen.value;
 };
+
+const handleLinkMenuOpen = () => {
+  if (!menuOpen.value) return;
+  menuOpen.value = !menuOpen.value;
+};
 </script>
 
 <template>
@@ -61,11 +66,15 @@ const handleMenuOpen = () => {
                 <summary>{{ link.title }}</summary>
                 <ul>
                   <li v-for="child in link.children" :key="child._path">
-                    <NuxtLink :to="child._path">{{ child.title }}</NuxtLink>
+                    <NuxtLink :to="child._path" @click="handleLinkMenuOpen">{{
+                      child.title
+                    }}</NuxtLink>
                   </li>
                 </ul>
               </details>
-              <NuxtLink :to="link._path" v-else>{{ link.title }}</NuxtLink>
+              <NuxtLink :to="link._path" @click="handleLinkMenuOpen" v-else>{{
+                link.title
+              }}</NuxtLink>
             </li>
           </ul>
         </ContentNavigation>
