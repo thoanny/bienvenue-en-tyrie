@@ -40,8 +40,8 @@ const handleMenuOpen = () => {
     </div>
 
     <div
-      class="fixed top-0 left-0 z-40 w-full sm:w-80 h-screen transition-transform -translate-x-full lg:translate-x-0 pt-16 lg:pt-0"
-      :class="{ '-translate-x-0': menuOpen }"
+      class="fixed top-0 left-0 z-40 w-full sm:w-80 h-screen transition-transform lg:translate-x-0 pt-16 lg:pt-0"
+      :class="{ '-translate-x-0': menuOpen, '-translate-x-full': !menuOpen }"
       aria-label="Sidebar"
     >
       <nav id="menu" class="h-full overflow-y-auto bg-base-200">
