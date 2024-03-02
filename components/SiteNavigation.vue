@@ -1,0 +1,89 @@
+<script setup>
+import { ref } from 'vue';
+
+const menuOpen = ref(false);
+
+const handleMenuOpen = () => {
+  menuOpen.value = !menuOpen.value;
+};
+</script>
+
+<template>
+  <div>
+    <div
+      class="bg-accent-content text-white flex justify-between items-center h-16 px-4 block lg:hidden fixed top-0 z-50 w-full"
+    >
+      <button class="btn btn-square btn-ghost" @click="handleMenuOpen">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+      <NuxtLink
+        to="/"
+        class="text-base sm:text-lg leading-4 font-bold mx-4 flex gap-2 items-center hover:text-gray-300 py-2 md:py-0"
+      >
+        <img src="@/assets/img/logo.png" class="h-10 w-10" />
+        Bienvenue en Tyrie
+      </NuxtLink>
+      <div class="w-12"></div>
+    </div>
+
+    <div
+      class="fixed top-0 left-0 z-40 w-full sm:w-80 h-screen transition-transform -translate-x-full lg:translate-x-0 pt-16 lg:pt-0"
+      :class="{ '-translate-x-0': menuOpen }"
+      aria-label="Sidebar"
+    >
+      <nav id="menu" class="h-full overflow-y-auto bg-base-200">
+        <div class="bg-accent-content text-white justify-between items-center h-16 hidden lg:flex">
+          <NuxtLink
+            to="/"
+            class="text-lg leading-4 font-bold mx-4 flex gap-2 items-center hover:text-gray-300 py-2 md:py-0"
+          >
+            <img src="@/assets/img/logo.png" class="h-10 w-10" />
+            Bienvenue en Tyrie
+          </NuxtLink>
+        </div>
+        <ContentNavigation v-slot="{ navigation }">
+          <ul class="menu w-full">
+            <li v-for="link of navigation" :key="link._path">
+              <details v-if="link.children && link.children.length > 1">
+                <summary>{{ link.title }}</summary>
+                <ul>
+                  <li v-for="child in link.children" :key="child._path">
+                    <NuxtLink :to="child._path">{{ child.title }}</NuxtLink>
+                  </li>
+                </ul>
+              </details>
+              <NuxtLink :to="link._path" v-else>{{ link.title }}</NuxtLink>
+            </li>
+          </ul>
+        </ContentNavigation>
+        <hr />
+        <ul class="menu w-full">
+          <li>
+            <a href="/#contribuer">Contribuer au contenu</a>
+          </li>
+          <li>
+            <a href="https://github.com/thoanny/bienvenue-en-tyrie" target="_blank">
+              Code source du projet
+            </a>
+          </li>
+          <li>
+            <a href="https://www.patreon.com/thoanny" target="_blank"> Soutenir sur Patreon </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</template>
