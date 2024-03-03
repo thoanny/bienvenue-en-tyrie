@@ -16,7 +16,7 @@ const handleLinkMenuOpen = () => {
 <template>
   <div>
     <div
-      class="bg-accent-content text-white flex justify-between items-center h-16 px-4 block lg:hidden fixed top-0 z-50 w-full"
+      class="bg-neutral text-white flex justify-between items-center h-16 px-4 block lg:hidden fixed top-0 z-50 w-full border-b border-base-100"
     >
       <button class="btn btn-square btn-ghost" @click="handleMenuOpen">
         <svg
@@ -45,12 +45,14 @@ const handleLinkMenuOpen = () => {
     </div>
 
     <div
-      class="fixed top-0 left-0 z-40 w-full sm:w-80 h-screen transition-transform lg:translate-x-0 pt-16 lg:pt-0"
+      class="bg-neutral fixed top-0 left-0 z-40 w-full sm:w-80 h-screen transition-transform lg:translate-x-0 pt-16 lg:pt-0"
       :class="{ '-translate-x-0': menuOpen, '-translate-x-full': !menuOpen }"
       aria-label="Sidebar"
     >
-      <nav id="menu" class="h-full overflow-y-auto bg-base-200">
-        <div class="bg-accent-content text-white justify-between items-center h-16 hidden lg:flex">
+      <nav id="menu" class="h-full overflow-y-auto">
+        <div
+          class="text-white justify-between items-center h-16 hidden lg:flex border-b border-base-100"
+        >
           <NuxtLink
             to="/"
             class="text-lg leading-4 font-bold mx-4 flex gap-2 items-center hover:text-gray-300 py-2 md:py-0"
@@ -78,7 +80,7 @@ const handleLinkMenuOpen = () => {
             </li>
           </ul>
         </ContentNavigation>
-        <hr />
+        <hr class="border-base-100" />
         <ul class="menu w-full">
           <li>
             <a href="/#contribuer">Contribuer au contenu</a>

@@ -15,9 +15,9 @@ const { surround } = useContent();
         />
         <ContentDoc v-slot="{ doc }">
           <div
-            class="bg-black h-full w-full bg-opacity-50 absolute z-20 text-center uppercase text-4xl flex items-center justify-center text-center text-white font-bold pb-44 px-8"
+            class="bg-black h-full w-full bg-opacity-50 absolute z-20 text-center uppercase text-4xl flex items-center justify-center text-center text-white font-bold pb-36 px-8"
           >
-            {{ doc.heroTitle ? doc.heroTitle : doc.title }}
+            <h1 class="drop-shadow-lg">{{ doc.heroTitle ? doc.heroTitle : doc.title }}</h1>
           </div>
         </ContentDoc>
         <Divider />
@@ -47,7 +47,7 @@ const { surround } = useContent();
                   <NuxtLink
                     :to="surround[0]._path"
                     v-if="surround[0]"
-                    class="border border-base-300 hover:bg-base-200 p-4 w-1/2 flex gap-1 rounded-box"
+                    class="border border-neutral hover:bg-neutral p-4 w-1/2 flex gap-1 rounded-box"
                   >
                     &laquo;
                     <span class="truncate">{{ surround[0].heroTitle || surround[0].title }}</span>
@@ -56,7 +56,7 @@ const { surround } = useContent();
                   <NuxtLink
                     :to="surround[1]._path"
                     v-if="surround[1]"
-                    class="border border-base-300 hover:bg-base-200 p-4 w-1/2 flex justify-end rounded-box gap-1"
+                    class="border border-neutral hover:bg-neutral p-4 w-1/2 flex justify-end rounded-box gap-1"
                   >
                     <span class="truncate">{{ surround[1].heroTitle || surround[1].title }}</span>
                     &raquo;
@@ -66,8 +66,8 @@ const { surround } = useContent();
               </div>
             </div>
             <div class="w-1/4 hidden md:block" v-if="doc.body?.toc?.links.length">
-              <nav class="sticky top-20">
-                <ul class="menu menu-sm border border-base-300 w-full rounded-box">
+              <nav class="sticky top-20 lg:top-4">
+                <ul class="menu menu-sm w-full rounded-box bg-neutral">
                   <li v-for="link in doc.body.toc.links">
                     <a :href="'#' + link.id">{{ link.text }}</a>
                     <ul v-if="link.children">

@@ -2,73 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: oklch(var(--p)) oklch(var(--n));
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: oklch(var(--n));
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: oklch(var(--p));
+  border-radius: 0.5rem;
+  border: 3px solid oklch(var(--n));
+}
+
 body {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 article {
+  @apply text-lg;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    @apply mb-4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-white underline decoration-primary underline-offset-4 decoration-4;
+    line-height: 1.375 !important;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
     @apply text-lg;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    ol {
-        @apply mb-4;
-    }
+  ul,
+  ol {
+    @apply ml-6;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-bold;
-    }
+  ul {
+    @apply list-disc;
+  }
 
-    h1 {
-        @apply text-5xl;
-    }
+  ol {
+    @apply list-decimal;
+  }
 
-    h2 {
-        @apply text-4xl;
+  a {
+    &:hover {
+      @apply text-white;
     }
-
-    h3 {
-        @apply text-3xl;
-    }
-
-    h4 {
-        @apply text-2xl;
-    }
-
-    h5 {
-        @apply text-xl;
-    }
-
-    h6 {
-        @apply text-lg;
-    }
-
-    ul,
-    ol {
-        @apply ml-6;
-    }
-
-    ul {
-        @apply list-disc;
-    }
-
-    ol {
-        @apply list-decimal;
-    }
+  }
 }
 
 .router-link-active {
-    @apply active;
+  @apply active;
 }
