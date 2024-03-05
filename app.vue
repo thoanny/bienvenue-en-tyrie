@@ -39,7 +39,7 @@ const { surround } = useContent();
                   <NuxtPage />
                 </article>
                 <div
-                  class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-12 opacity-50 px-4 md:px-0"
+                  class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-12 opacity-50"
                   v-if="doc.contributors"
                 >
                   <strong class="text-xs">Contributeurs&nbsp;:</strong>
@@ -50,7 +50,7 @@ const { surround } = useContent();
                     {{ contributor }}
                   </span>
                 </div>
-                <div v-if="surround" class="flex gap-4 font-semibold mt-6 px-4 md:px-0">
+                <div v-if="surround" class="flex gap-4 font-semibold mt-6">
                   <NuxtLink
                     :to="surround[0]._path"
                     v-if="surround[0]"
