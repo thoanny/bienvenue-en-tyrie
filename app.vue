@@ -8,12 +8,19 @@ const { surround } = useContent();
 
     <div class="lg:ml-80 bg-base-100 mt-16 lg:mt-0">
       <header class="bg-base-100 overflow-hidden relative" style="height: 600px">
-        <img
-          src="@/assets/img/background-default.jpg"
-          class="absolute h-full w-full object-cover object-center z-10"
-          alt=""
-        />
         <ContentDoc v-slot="{ doc }">
+          <img
+            :src="`img/header/${doc.image}`"
+            class="absolute h-full w-full object-cover object-center z-10"
+            alt=""
+            v-if="doc.image"
+          />
+          <img
+            src="@/assets/img/background-default.jpg"
+            class="absolute h-full w-full object-cover object-center z-10"
+            alt=""
+            v-else
+          />
           <div
             class="bg-black h-full w-full bg-opacity-50 absolute z-20 text-center uppercase text-4xl flex items-center justify-center text-center text-white font-bold pb-36 px-8"
           >
