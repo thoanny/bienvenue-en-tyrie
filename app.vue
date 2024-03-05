@@ -88,6 +88,18 @@ const { surround } = useContent();
             </div>
           </ContentDoc>
         </div>
+
+        <footer class="footer p-4 text-base-content text-xs mt-6 opacity-50">
+          <aside>
+            <p>
+              © ArenaNet, Inc. Tous droits réservés. Guild Wars 2, ArenaNet, NCsoft, le logo NC et
+              tous les logos et dessins associés sont les marques commerciales et/ou déposées de
+              NCsoft Corporation. Toutes les autres marques appartiennent à leurs propriétaires
+              respectifs. Bienvenue en Tyrie est un fansite qui n'engage que ses auteurs et en aucun
+              cas les créateurs et éditeurs de Guild Wars 2.
+            </p>
+          </aside>
+        </footer>
       </div>
     </div>
   </div>
