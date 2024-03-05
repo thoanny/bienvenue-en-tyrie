@@ -1,5 +1,5 @@
 ---
-title: Équipement
+title: Armure
 ---
 
 ::WorkInProgress
