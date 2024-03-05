@@ -26,6 +26,10 @@
 
 body {
   scroll-behavior: smooth;
+
+  &.menu-open {
+    @apply overflow-hidden sm:overflow-auto;
+  }
 }
 
 article {

@@ -11,6 +11,14 @@ const handleLinkMenuOpen = () => {
   if (!menuOpen.value) return;
   menuOpen.value = !menuOpen.value;
 };
+
+useHead({
+  bodyAttrs: {
+    class: computed(() => {
+      return menuOpen.value ? 'menu-open' : '';
+    }),
+  },
+});
 </script>
 
 <template>
