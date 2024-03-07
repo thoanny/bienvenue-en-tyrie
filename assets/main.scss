@@ -4,21 +4,21 @@
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: oklch(var(--p)) oklch(var(--n));
-}
+// * {
+//   scrollbar-width: auto;
+//   scrollbar-color: oklch(var(--p)) oklch(var(--n));
+// }
 
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 1rem;
 }
 
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: oklch(var(--n));
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: oklch(var(--p));
   border-radius: 0.5rem;
   border: 3px solid oklch(var(--n));
