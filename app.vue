@@ -10,7 +10,7 @@ const { surround } = useContent();
       <header class="bg-base-100 overflow-hidden relative" style="height: 600px">
         <ContentDoc v-slot="{ doc }">
           <img
-            :src="`img/header/${doc.image}`"
+            :src="`/img/header/${doc.image}`"
             class="absolute h-full w-full object-cover object-center z-10"
             alt=""
             v-if="doc.image"
